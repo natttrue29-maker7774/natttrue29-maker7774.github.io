@@ -1,0 +1,159 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Natt TikTok App</title>
+<meta name="description" content="Natt TikTok App: website, Terms of Service and Privacy Policy.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+/* Layout: slim header with section tabs, one readable column, legal text in numbered clauses */
+:root{
+  --bg:#fbf8fb; --surface:#ffffff; --fg:#231a2b; --muted:#6c6178; --line:#e9e1ee;
+  --accent:#6a3de8; --accent-2:#ff5e62; --chip:#f1ebfd;
+  --display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body:"Source Sans 3", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#16121c; --surface:#1f1a27; --fg:#efe9f4; --muted:#a79cb3; --line:#342c3f;
+  --accent:#a488ff; --accent-2:#ff8a8d; --chip:#2b2338; color-scheme:dark }}
+:root[data-theme="dark"]{
+  --bg:#16121c; --surface:#1f1a27; --fg:#efe9f4; --muted:#a79cb3; --line:#342c3f;
+  --accent:#a488ff; --accent-2:#ff8a8d; --chip:#2b2338; color-scheme:dark }
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.6;padding-inline:16px;padding-block:0 48px}
+.wrap{max-width:760px;margin:0 auto}
+header{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding-block:24px;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:12px;font-family:var(--display);font-weight:700;font-size:1.2rem}
+.logo{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--accent-2),var(--accent));display:grid;place-items:center}
+nav{display:flex;flex-wrap:wrap;gap:6px}
+nav a{font-weight:600;font-size:.95rem;color:var(--muted);text-decoration:none;padding:6px 12px;border-radius:999px}
+nav a[aria-current="page"]{background:var(--chip);color:var(--accent)}
+nav a:hover{color:var(--fg)}
+nav a:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+h1,h2{font-family:var(--display);text-wrap:balance;line-height:1.2}
+h1{font-size:clamp(1.9rem,5vw,2.6rem);margin:40px 0 8px}
+h2{font-size:1.25rem;margin:32px 0 6px}
+.lede{color:var(--muted);font-size:1.1rem;max-width:62ch}
+.meta{font-size:.9rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+p,li{max-width:65ch}
+a{color:var(--accent)}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:28px;padding:0;list-style:none}
+.features li{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px}
+.features strong{display:block;font-family:var(--display)}
+.features code{font-size:.85rem;color:var(--muted)}
+.contact{display:inline-block;background:var(--chip);padding:2px 8px;border-radius:6px;user-select:all}
+section[hidden]{display:none}
+footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+</style>
+</head><body>
+
+<div class="wrap">
+<header>
+  <div class="brand">
+    <span class="logo" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M8 5v9l7-4.5z" fill="#fff"/><rect x="5" y="16" width="3" height="4" rx="1" fill="#fff"/><rect x="10.5" y="14" width="3" height="6" rx="1" fill="#fff"/><rect x="16" y="12" width="3" height="8" rx="1" fill="#fff"/></svg></span>
+    Natt TikTok App
+  </div>
+  <nav aria-label="Pages">
+    <a href="#home" data-tab="home">Home</a>
+    <a href="#terms" data-tab="terms">Terms of Service</a>
+    <a href="#privacy" data-tab="privacy">Privacy Policy</a>
+  </nav>
+</header>
+
+<main>
+<section id="home" data-page="home">
+  <h1>Your TikTok videos and stats in one place</h1>
+  <p class="lede">Natt TikTok App is a personal web tool. You sign in with your TikTok account, see your profile numbers and your public videos, and send new videos to TikTok as drafts.</p>
+  <ul class="features">
+    <li><strong>Sign in with TikTok</strong>Uses TikTok Login Kit. We never see your TikTok password.<br><code>user.info.basic</code></li>
+    <li><strong>Profile and stats</strong>Bio, profile link, followers, following, likes and video count.<br><code>user.info.profile · user.info.stats</code></li>
+    <li><strong>Your videos</strong>A list of your public videos with views and likes.<br><code>video.list</code></li>
+    <li><strong>Upload drafts</strong>Pick a video file and send it to your TikTok inbox to finish and post in the TikTok app.<br><code>video.upload</code></li>
+  </ul>
+  <h2>How it works</h2>
+  <ol>
+    <li>Click <em>Continue with TikTok</em> and approve the permissions TikTok shows you.</li>
+    <li>Your dashboard loads your profile, stats and recent videos.</li>
+    <li>To upload, choose a video file. It arrives in TikTok as a draft; you edit and post it yourself.</li>
+    <li>You can disconnect at any time in TikTok under Settings and privacy › Security › Manage app permissions.</li>
+  </ol>
+  <p>Read our <a href="#terms" data-tab="terms">Terms of Service</a> and <a href="#privacy" data-tab="privacy">Privacy Policy</a>.</p>
+</section>
+
+<section id="terms" data-page="terms" hidden>
+  <p class="meta">Effective September 29, 2026</p>
+  <h1>Terms of Service</h1>
+  <p class="lede">These terms apply when you use Natt TikTok App (“the App”). By using the App you agree to them.</p>
+  <h2>1. What the App does</h2>
+  <p>The App lets you sign in with TikTok, view your own profile information, statistics and public videos, and upload videos to your TikTok account as drafts. The App is not made, endorsed or operated by TikTok.</p>
+  <h2>2. Your TikTok account</h2>
+  <p>You must have a TikTok account and follow TikTok’s Terms of Service and Community Guidelines. You are responsible for all activity through your account and for the content you upload.</p>
+  <h2>3. Your content</h2>
+  <p>You keep all rights to videos you upload. You give the App permission only to send the file you choose to TikTok on your behalf. Do not upload content you do not have the right to share, or content that breaks the law or TikTok’s rules.</p>
+  <h2>4. Acceptable use</h2>
+  <p>Do not misuse the App, try to access other people’s data, overload or disrupt the service, or use it to send spam.</p>
+  <h2>5. Availability</h2>
+  <p>The App is provided “as is” and may change or stop at any time. Features depend on TikTok’s API and may stop working if TikTok changes or withdraws access.</p>
+  <h2>6. Limitation of liability</h2>
+  <p>To the extent the law allows, the App’s owner is not liable for indirect or consequential losses, lost data or lost content arising from use of the App.</p>
+  <h2>7. Ending use</h2>
+  <p>You can stop using the App at any time and remove its access in TikTok’s app permissions settings. We may suspend access that breaks these terms.</p>
+  <h2>8. Changes and law</h2>
+  <p>We may update these terms and will change the effective date above when we do. These terms are governed by the laws of Thailand.</p>
+  <h2>9. Contact</h2>
+  <p>Questions: <span class="contact">natttrue29@gmail.com</span></p>
+</section>
+
+<section id="privacy" data-page="privacy" hidden>
+  <p class="meta">Effective September 29, 2026</p>
+  <h1>Privacy Policy</h1>
+  <p class="lede">This policy explains what Natt TikTok App (“the App”) collects when you sign in with TikTok, how it is used, and your choices.</p>
+  <h2>1. Information we receive from TikTok</h2>
+  <p>Only with your permission, through TikTok’s official API:</p>
+  <ul>
+    <li>Basic profile: open ID, display name, avatar (<code>user.info.basic</code>).</li>
+    <li>Profile details: bio, profile link, verified status (<code>user.info.profile</code>).</li>
+    <li>Statistics: follower, following, likes and video counts (<code>user.info.stats</code>).</li>
+    <li>Your public videos and their view and like counts (<code>video.list</code>).</li>
+  </ul>
+  <p>We do not receive your TikTok password.</p>
+  <h2>2. Videos you upload</h2>
+  <p>When you choose a video to upload, the file is sent to TikTok as a draft (<code>video.upload</code>). We do not keep a copy after the transfer finishes.</p>
+  <h2>3. How we use information</h2>
+  <p>Only to show you your own dashboard and to perform uploads you request. We do not sell your data, use it for advertising, or share it with third parties, except TikTok itself as needed to provide the features.</p>
+  <h2>4. Storage and security</h2>
+  <p>Access tokens are stored securely and used only to call TikTok’s API for you. Profile and video data is fetched when you open the dashboard and is not kept longer than needed to display it.</p>
+  <h2>5. Your choices</h2>
+  <p>You can revoke the App’s access at any time in TikTok under Settings and privacy › Security › Manage app permissions. You can also email us to ask that any data related to you be deleted; we will do so within 30 days.</p>
+  <h2>6. Children</h2>
+  <p>The App is not intended for anyone under the minimum age required to use TikTok in their country.</p>
+  <h2>7. Changes</h2>
+  <p>If we change this policy we will update the effective date above.</p>
+  <h2>8. Contact</h2>
+  <p>Privacy questions or deletion requests: <span class="contact">natttrue29@gmail.com</span></p>
+</section>
+</main>
+
+<footer>© 2026 Natt TikTok App. Not affiliated with TikTok.</footer>
+</div>
+
+<script>
+(function(){
+  var pages=["home","terms","privacy"];
+  function show(id){
+    if(pages.indexOf(id)<0) id="home";
+    document.querySelectorAll("[data-page]").forEach(function(s){ s.hidden = s.dataset.page!==id; });
+    document.querySelectorAll("nav a").forEach(function(a){
+      if(a.dataset.tab===id) a.setAttribute("aria-current","page"); else a.removeAttribute("aria-current");
+    });
+  }
+  document.addEventListener("click",function(e){
+    var a=e.target.closest("a[data-tab]"); if(!a) return;
+    e.preventDefault(); show(a.dataset.tab);
+    try{ history.replaceState(null,"","#"+a.dataset.tab); }catch(_){}
+    window.scrollTo(0,0);
+  });
+  window.addEventListener("hashchange",function(){ show(location.hash.slice(1)); });
+  show(location.hash.slice(1));
+})();
+</script>
+</body></html>
